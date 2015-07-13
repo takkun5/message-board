@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:edit, :update]
+  before_action :set_message, only: [:edit, :update, :destroy]
 
   def index
     @messages = Message.all
@@ -46,5 +46,4 @@ class MessagesController < ApplicationController
   def set_message
    @message = Message.find(params[:id])
   end  
-  
 end
